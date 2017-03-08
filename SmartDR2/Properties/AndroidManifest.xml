@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.BlackBurn95.SmartDR2" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="16" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="SmartDR APP"></application>
+  <activity android:name="MainActivity"/>
+  <activity android:name="Patient"/>
+  <activity android:name="RegisterActivity"/>
+  <activity android:name="DrugsActivity"/>
+  <activity android:name="Doctor"/>
+  <activity android:name="PatientData"/>
+  <activity android:name="PatientEdit"/>
+  <activity android:name="PatientAdd"/>
+  <activity android:name="PatientView"/>
+
+  <receiver android:name=".PatientBoradcast">
+    <intent-filter android:priority="2147483647">
+      <action android:name="com.blackburn95.patient_service" />
+      <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
+  </receiver>
+
+  <receiver android:name=".DoctorBroadcast">
+    <intent-filter android:priority="2147483647">
+      <action android:name="com.blackburn95.doctor_service" />
+      <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
+  </receiver>
+  
+</manifest>

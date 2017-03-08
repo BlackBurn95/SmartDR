@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Patient ID"
+        android:id="@+id/adddate_pid" />
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adddate_pid"
+        android:hint="Location"
+        android:id="@+id/adddate_location" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/adddate_location"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/adddate_datelayout">
+        <EditText
+            android:inputType="number"
+            android:hint="dd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dd" />
+        <TextView
+            android:text="/"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/adddate_view1" />
+        <EditText
+            android:inputType="number"
+            android:hint="MM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MM" />
+        <TextView
+            android:text="/"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/adddate_view2"
+            android:layout_marginTop="0.0dp"
+            android:layout_marginBottom="0.0dp" />
+        <EditText
+            android:inputType="number"
+            android:hint="yyyy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yyyy" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/adddate_linearLayout2">
+            <EditText
+                android:inputType="number"
+                android:hint="HH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/HH" />
+            <TextView
+                android:text=":"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/adddate_textView3" />
+            <EditText
+                android:inputType="number"
+                android:hint="mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mm" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/adddate_datelayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/adddate_datelayout3">
+        <Button
+            android:id="@+id/adddate_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_date" />
+        <Button
+            android:text="@string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/adddate_canc_btn" />
+    </LinearLayout>
+</RelativeLayout>

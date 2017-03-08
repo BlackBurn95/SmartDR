@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/patient_pid_txt"
+        android:hint="Patient ID" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/patient_drugid_txt"
+        android:layout_below="@id/patient_pid_txt"
+        android:hint="Drug Name" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patient_drugid_txt"
+        android:id="@+id/patient_dosesnum_txt"
+        android:hint="Num of Doses" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patient_dosesnum_txt"
+        android:id="@+id/patient_time_txt"
+        android:hint="Time" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patient_time_txt"
+        android:id="@+id/patient_pill_txt"
+        android:hint="Num of Pills" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patient_pill_txt"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout1"
+        android:layout_marginTop="30dp">
+        <Button
+            android:text="@string/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/patient_pill_txt"
+            android:id="@+id/patient_update"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:text="@string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/patient_update"
+            android:layout_below="@id/patient_pill_txt"
+            android:id="@+id/patient_cancel"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+    <Switch
+        android:text="New Drug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patient_pill_txt"
+        android:id="@+id/switch1" />
+</RelativeLayout>

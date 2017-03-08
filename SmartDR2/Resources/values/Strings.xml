@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">SmartDR</string>
+    <string name="login">Log In</string>
+    <string name="logout">Log Out</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
+    <string name="isdr">Is Doctor</string>
+    <string name="drug">Drugs</string>
+    <string name="date">Dates</string>
+    <string name="test">Tests</string>
+    <string name="refresh">Refresh</string>
+    <string name="view_patient">View Patients</string>
+    <string name="add_patient">Add Patient</string>
+    <string name="update">Update</string>
+    <string name="edit_patient">Add Drug</string>
+    <string name="add_date">Add Date</string>
+    <string name="view_date">View Dates</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.BlackBurn95.SmartDR2" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="SmartDR APP" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="AddDateActivity" android:parentActivityName="md5c3e73cd2427ea270c191b05f4188757a.Doctor" android:name="md5c3e73cd2427ea270c191b05f4188757a.AddDateActivity" />
+    <receiver android:enabled="true" android:name="md5c3e73cd2427ea270c191b05f4188757a.AlarmReciver" />
+    <activity android:label="DateActivity" android:parentActivityName="md5c3e73cd2427ea270c191b05f4188757a.PatientActivity" android:name="md5c3e73cd2427ea270c191b05f4188757a.DateActivity" />
+    <receiver android:enabled="true" android:name="md5c3e73cd2427ea270c191b05f4188757a.DatesAlarmReciver" />
+    <activity android:label="Doctor" android:name="md5c3e73cd2427ea270c191b05f4188757a.Doctor" />
+    <receiver android:exported="true" android:label="Doctor Reciver" android:name="md5c3e73cd2427ea270c191b05f4188757a.DoctorBroadcast">
+      <intent-filter>
+        <action android:name="com.blackburn95.doctor_service" />
+      </intent-filter>
+    </receiver>
+    <service android:name="md5c3e73cd2427ea270c191b05f4188757a.DoctorService" />
+    <activity android:label="DrDataActivity" android:parentActivityName="md5c3e73cd2427ea270c191b05f4188757a.Doctor" android:name="md5c3e73cd2427ea270c191b05f4188757a.DrDataActivity" />
+    <activity android:label="@string/ApplicationName" android:parentActivityName="md5c3e73cd2427ea270c191b05f4188757a.PatientActivity" android:name="md5c3e73cd2427ea270c191b05f4188757a.DrugsActivity" />
+    <activity android:icon="@drawable/icon" android:label="SmartDR2" android:name="md5c3e73cd2427ea270c191b05f4188757a.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="@string/ApplicationName" android:name="md5c3e73cd2427ea270c191b05f4188757a.PatientActivity" />
+    <activity android:label="PatientAdd" android:parentActivityName="md5c3e73cd2427ea270c191b05f4188757a.Doctor" android:name="md5c3e73cd2427ea270c191b05f4188757a.PatientAdd" />
+    <receiver android:exported="true" android:label="Patient Reciver" android:name="md5c3e73cd2427ea270c191b05f4188757a.PatientBoradcast">
+      <intent-filter>
+        <action android:name="com.blackburn95.patient_service" />
+      </intent-filter>
+    </receiver>
+    <activity android:label="PatientData" android:parentActivityName="md5c3e73cd2427ea270c191b05f4188757a.PatientView" android:name="md5c3e73cd2427ea270c191b05f4188757a.PatientData" />
+    <activity android:label="PatientEdit" android:parentActivityName="md5c3e73cd2427ea270c191b05f4188757a.Doctor" android:name="md5c3e73cd2427ea270c191b05f4188757a.PatientEdit" />
+    <service android:name="md5c3e73cd2427ea270c191b05f4188757a.PatientService" />
+    <activity android:label="PatientView" android:parentActivityName="md5c3e73cd2427ea270c191b05f4188757a.Doctor" android:name="md5c3e73cd2427ea270c191b05f4188757a.PatientView" />
+    <activity android:label="@string/ApplicationName" android:name="md5c3e73cd2427ea270c191b05f4188757a.RegisterActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.BlackBurn95.SmartDR2.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.BlackBurn95.SmartDR2" />
+      </intent-filter>
+    </receiver>
+  </application>
+  <activity android:name="MainActivity" />
+  <activity android:name="Patient" />
+  <activity android:name="RegisterActivity" />
+  <activity android:name="DrugsActivity" />
+  <activity android:name="Doctor" />
+  <activity android:name="PatientData" />
+  <activity android:name="PatientEdit" />
+  <activity android:name="PatientAdd" />
+  <activity android:name="PatientView" />
+  <receiver android:name=".PatientBoradcast">
+    <intent-filter android:priority="2147483647">
+      <action android:name="com.blackburn95.patient_service" />
+      <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
+  </receiver>
+  <receiver android:name=".DoctorBroadcast">
+    <intent-filter android:priority="2147483647">
+      <action android:name="com.blackburn95.doctor_service" />
+      <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
+  </receiver>
+</manifest>
